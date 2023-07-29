@@ -1,0 +1,255 @@
+@media (max-width: 850px) {
+  .logoTranque {
+    margin-top: 40px;
+    display: flex;
+    height: 32px;
+    width: 80px;
+    justify-content: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 850px) {
+  .logoTranque {
+    margin-top: 40px;
+    display: flex;
+    height: 32px;
+    width: 80px;
+    justify-content: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+}
+.fondo {
+  height: calc(100%);
+
+  background-color: #01579b;
+  position: absolute;
+  width: 80px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-size: 16px;
+  transition: width 0.5s ease-out;
+  transition-delay: 0.5s;
+  overflow-x: hidden;
+}
+
+.fondoDummy {
+  height: 120%;
+  background-color: #01579b;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-size: 16px;
+  transition: width 0.5s ease-out;
+  transition-delay: 0.5s;
+}
+.fondoOpenDummy {
+  width: 320px;
+  transition: width 0.5s ease-in;
+  overflow-y: visible;
+}
+
+.fondo::-webkit-scrollbar {
+  display: flex;
+  width: 8px;
+  border-radius: 16px;
+}
+
+.fondo::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+}
+
+.fondo::-webkit-scrollbar-thumb:hover {
+  background: rgb(194, 194, 194);
+}
+
+.fondoOpen::-webkit-scrollbar {
+  display: flex;
+  width: 8px;
+  border-radius: 8px;
+  margin-right: 2px;
+}
+
+.fondoOpen::-webkit-scrollbar-thumb {
+  background: rgb(223, 223, 223);
+  margin-right: 2px;
+  border-radius: 8px;
+}
+
+
+.subMenuOpen {
+  display: flex;
+  align-items: center;
+  width: 229px;
+  height: auto;
+  font-size: 14px;
+  padding-left: 65px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.subMenuOpen:hover {
+  background-color: #1976d2;
+
+}
+
+
+.fondoOpen::-webkit-scrollbar-thumb:hover {
+  background: rgb(194, 194, 194);
+  margin-right: 2px;
+  left: 30px;
+}
+
+.fondoOpen {
+  width: 320px;
+  transition: width 0.5s ease-in;
+  position: absolute;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.logoMenu {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  margin: 0px 8px 0px 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.logoMenu:hover {
+  background-color: #1976d2;
+}
+
+.items {
+  padding: 8px;
+  gap: 20px;
+  max-height: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  color: #fafafa;
+  transition: max-heigth 1s ease-in;
+}
+
+.item {
+  height: 40px;
+  max-height: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0px 8px 16px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s ease-out;
+  transition-delay: 0.3s;
+}
+
+.itemOpen {
+  height: 40px;
+  max-height: 60px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0px 8px 16px;
+  display: flex;
+  align-items: center;
+  transition: max-height 1s ease-out;
+}
+
+.item:hover {
+  background-color: #1976d2;
+}
+
+.itemOpen:hover {
+  background-color: #1976d2;
+}
+
+.itemLogo {
+  width: 56px;
+  display: flex;
+  margin-left: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.5s linear;
+}
+
+.infoOpen {
+  transition: opacity 0.2s linear;
+  transition-delay: 0.5s;
+  display: flex;
+  transform: translate(0);
+  min-width: 230px;
+  opacity: 1;
+}
+
+.infoClosed {
+  opacity: 0;
+  display: flex;
+  min-width: 230px;
+  transition: opacity 0.2s linear;
+  pointer-events: none;
+}
+
+.arrowContainer {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  transition: rotate 0.2s ease-out;
+}
+
+.circle {
+  position: relative;
+  height: 15px;
+  width: 15px;
+  background-color: #EF5350;
+  border-radius: 100px;
+  left: -10px;
+  top: -10px;
+  z-index: 2;
+}
+
+.arrowContainerOpen {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  rotate: 180deg;
+  transition: rotate 0.2s ease-in;
+}
+
+.accordeon {
+  max-height: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.accordeonOpen {
+  transition: opacity 0.2s linear;
+  transition-delay: 0.5s;
+  transform: translate(-74px);
+  max-height: auto;
+  opacity: 1;
+  display: flex;
+  margin-left: 75px;
+  margin-bottom: 10px;
+}
+
+.separatorText {
+  font-size: 12px;
+  margin-left: 70px;
+  color: #8D8D8D;
+}

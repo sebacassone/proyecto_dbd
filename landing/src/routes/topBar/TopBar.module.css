@@ -1,0 +1,138 @@
+@media (max-width: 1376px) {
+  .buttonContainer {
+    display: none;
+  }
+  .logoText {
+    display: none;
+  }
+  .componedButton {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .logoContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1376px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 850px) {
+  .logoContainer {
+    display: flex;
+  }
+}
+
+.logoText {
+  font-size: 20px;
+  display: flex;
+  font-weight: 600;
+  text-align: start;
+  margin-left: 20px;
+}
+
+.notPressed {
+  filter: grayscale();
+}
+.fondo {
+  height: 94px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.container {
+  margin: 0px 17.5px 0px 17.5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.tabCuantity {
+  background-color: #1976d2;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.14px;
+
+  /* Light/Primary/Contrast */
+
+  color: #ffffff;
+  height: 20px;
+  width: 24px;
+  border-radius: 64px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alertButton {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  padding: 6px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: transparent;
+  border-color: #ed6c02;
+  color: #ed6c02;
+  text-align: center;
+  align-items: center;
+}
+
+.emergencyButton {
+  padding: 4px 10px;
+  height: 36px;
+  background-color: #d32f2f;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.componedButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  color: #616161;
+}

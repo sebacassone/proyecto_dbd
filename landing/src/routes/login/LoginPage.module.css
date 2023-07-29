@@ -1,0 +1,20 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+.link {
+  margin-top: 200px;
+}
+.buttontolink {
+  background-color: #01579b;
+  color: #ffffff;
+}
+
+.buttontolink:hover {
+  background-color: #0071c7;
+}
