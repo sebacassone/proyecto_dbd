@@ -1,13 +1,15 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+import java.math.BigInteger;
 
 public class CarritoCompra {
 
     private int id_carrito;
     private boolean estado;
-    private bigint nroTarjeta;
+    private BigInteger nroTarjeta;
 
     //Constructor
-    public CarritoCompra(int id_carrito, boolean estado, bigint nroTarjeta) {
+    public CarritoCompra(int id_carrito, boolean estado, BigInteger nroTarjeta) {
         this.id_carrito = id_carrito;
         this.estado = estado;
         this.nroTarjeta = nroTarjeta;
@@ -22,7 +24,7 @@ public class CarritoCompra {
         return estado;
     }
 
-    public bigint getNroTarjeta() {
+    public BigInteger getNroTarjeta() {
         return nroTarjeta;
     }
 
@@ -35,7 +37,7 @@ public class CarritoCompra {
         this.estado = estado;
     }
 
-    public void setNroTarjeta(bigint nroTarjeta) {
+    public void setNroTarjeta(BigInteger nroTarjeta) {
         this.nroTarjeta = nroTarjeta;
     }
 }

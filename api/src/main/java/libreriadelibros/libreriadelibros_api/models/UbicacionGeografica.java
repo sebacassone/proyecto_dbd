@@ -1,14 +1,16 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+import org.w3c.dom.Text;
 
 public class UbicacionGeografica {
 
     private int id_ubicacion;
-    private text paisOrigen;
-    private text ciudad;
-    private text codigoPostal;
+    private Text paisOrigen;
+    private Text ciudad;
+    private Text codigoPostal;
 
     //Constructor
-    public UbicacionGeografica(int id_ubicacion, text paisOrigen, text ciudad, text codigoPostal) {
+    public UbicacionGeografica(int id_ubicacion, Text paisOrigen, Text ciudad, Text codigoPostal) {
         this.id_ubicacion = id_ubicacion;
         this.paisOrigen = paisOrigen;
         this.ciudad = ciudad;
@@ -20,15 +22,15 @@ public class UbicacionGeografica {
         return id_ubicacion;
     }
 
-    public text getPaisOrigen() {
+    public Text getPaisOrigen() {
         return paisOrigen;
     }
 
-    public text getCiudad() {
+    public Text getCiudad() {
         return ciudad;
     }
 
-    public text getCodigoPostal() {
+    public Text getCodigoPostal() {
         return codigoPostal;
     }
     //Setters
@@ -36,15 +38,15 @@ public class UbicacionGeografica {
         this.id_ubicacion = id_ubicacion;
     }
 
-    public void setPaisOrigen(text paisOrigen) {
+    public void setPaisOrigen(Text paisOrigen) {
         this.paisOrigen = paisOrigen;
     }
 
-    public void setCiudad(text ciudad) {
+    public void setCiudad(Text ciudad) {
         this.ciudad = ciudad;
     }
 
-    public void setCodigoPostal(text codigoPostal) {
+    public void setCodigoPostal(Text codigoPostal) {
         this.codigoPostal = codigoPostal;
     }
 }

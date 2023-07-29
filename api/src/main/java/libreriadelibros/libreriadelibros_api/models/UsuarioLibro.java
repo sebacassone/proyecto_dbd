@@ -1,4 +1,4 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
 
 public class UsuarioLibro {
     private int id_usuario;

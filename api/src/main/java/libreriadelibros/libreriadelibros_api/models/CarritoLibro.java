@@ -1,4 +1,4 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
 
 public class CarritoLibro {
     private int id_carrito;
