@@ -1,0 +1,45 @@
+.table {
+    width: 100%;
+   
+}
+
+.masterRow {    
+    background: #ffffff;
+    color: #01579B;
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.row {
+    background: #ffffff;
+    color: #333333;
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}   
+
+
+.inputs {
+    border: none;
+    height: 23px;
+    font-size: 16px;
+    max-width: 183px;
+    padding: 16.5px 10px 16.5px 14px;
+}
+
+.action {
+ 
+cursor:pointer;
+    
+}
+.headerCell {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .dataCell {
+    /* Ajusta la alineación según tus necesidades */
+    text-align: left;
+  }
+
+.inputs:focus {
+    outline-color: #1769aa;
+}

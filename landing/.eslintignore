@@ -1,0 +1,9 @@
+/.storybook
+/build-utils
+/builds
+/coverage
+/doc
+/node_modules
+/public
+/storybook-static
+/storybook-static.txt

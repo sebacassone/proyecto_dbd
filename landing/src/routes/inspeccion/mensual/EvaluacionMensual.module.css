@@ -1,0 +1,149 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto auto auto auto;
+}
+
+.pageHeader {
+  display: none
+}
+@media (min-width: 554px){
+  .pageHeader {
+    color: #646464;
+    display: flex;
+    text-align: center;
+    margin: 12px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+.headerLink {
+  cursor: pointer;
+}
+
+.headerLinkSelected {
+  cursor: pointer;
+  color: #1976D2;
+}
+
+h1 {
+  color: #0288d1 !important;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  margin-left: 12px;
+}
+
+h2 {
+  color: #333333 !important;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+}
+.container {
+  padding: 20px 20px 20px 20px;
+}
+
+.buttonContainer {
+  margin-top: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.stateContainer {
+  margin-top: 30px;
+}
+.buttonText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+.cardsContainer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 0fr);
+  gap: 30px 10px;
+}
+@media (min-width: 734px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 0fr);
+  }
+}
+
+@media (min-width: 990px) {
+  .cardsContainer {
+    grid-template-columns: repeat(3, 0fr);
+  }
+}
+
+.table {
+  display: flex;
+  padding: 16px;
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  box-sizing: border-box;
+  background: #ffffff;
+
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+.comprobationContainer {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.tableContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #ffffff;
+  color: #333333;
+  padding: 0px 16px 0px 16px;
+}
+
+.pdfSection {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: -10000px;
+  justify-content: center;
+  margin: auto;
+  width: 600px;
+  min-width: 600px;
+  
+}
+
+
+.rotate {
+  display: flex;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

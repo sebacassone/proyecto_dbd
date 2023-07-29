@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.masterRow {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: space-between;
+  background: #fafafa;
+  color: #01579b;
+  padding: 16px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: space-between;
+  background: #ffffff;
+  color: #333333;
+  padding: 16px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
