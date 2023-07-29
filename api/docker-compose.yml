@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres # Se coloca la imagen de postgres
+    restart: always # Se reinicia el servicio siempre
+    ports:
+      - 5432:5432 # Se expone el puerto 5432
+    environment:
+      - DATABASE_HOST=$DATABASE_HOST # Se coloca la ip del host
+      - POSTGRES_USER=$POSTGRES_USER # Se coloca el usuario
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD # Se coloca la contraseña
+      - POSTGRES_DB=$POSTGRES_DB # Se coloca el nombre de la base de datos
+    volumes:
+      - ./database:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4 # Se coloca la imagen de pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: $PGADMIN_DEFAULT_EMAIL
+      PGADMIN_DEFAULT_PASSWORD: $PGADMIN_DEFAULT_PASSWORD
+    volumes:
+      - ./backup.tar:/pgadmin4/dvdrental.tar
+    ports:
+      - 80:80
+    depends_on:
+      - postgres # Se coloca la dependencia de postgres
