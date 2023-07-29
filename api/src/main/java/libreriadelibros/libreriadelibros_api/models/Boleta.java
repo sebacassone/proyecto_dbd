@@ -1,7 +1,6 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
 
 public class Boleta {
-
     private int id_boleta;
     private int monto;
     private int id_carrito;

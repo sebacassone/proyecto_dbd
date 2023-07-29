@@ -1,4 +1,4 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
 
 public class FavoritosLibro {
     private int id_libro;

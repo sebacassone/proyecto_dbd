@@ -1,12 +1,14 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+import org.w3c.dom.Text;
 
 public class Rol {
     private int id_rol;
-    private text nombreRol;
+    private Text nombreRol;
     private int id_usuario;
 
     //Constructor
-    public Rol(int id_rol, text nombreRol, int id_usuario) {
+    public Rol(int id_rol, Text nombreRol, int id_usuario) {
         this.id_rol = id_rol;
         this.nombreRol = nombreRol;
         this.id_usuario = id_usuario;
@@ -19,7 +21,7 @@ public class Rol {
         return id_rol;
     }
 
-    public text getNombreRol() {
+    public Text getNombreRol() {
         return nombreRol;
     }
 
@@ -32,7 +34,7 @@ public class Rol {
         this.id_rol = id_rol;
     }
 
-    public void setNombreRol(text nombreRol) {
+    public void setNombreRol(Text nombreRol) {
         this.nombreRol = nombreRol;
     }
 

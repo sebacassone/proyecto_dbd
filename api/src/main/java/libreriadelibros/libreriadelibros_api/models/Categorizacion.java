@@ -1,11 +1,13 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+import org.w3c.dom.Text;
 
 public class Categorizacion {
     private int id_categorizacion;
-    private text genero;
+    private Text genero;
 
     //Constructor
-    public Categorizacion(int id_categorizacion, text genero) {
+    public Categorizacion(int id_categorizacion, Text genero) {
         this.id_categorizacion = id_categorizacion;
         this.genero = genero;
     }
@@ -15,7 +17,7 @@ public class Categorizacion {
         return id_categorizacion;
     }
 
-    public text getGenero() {
+    public Text getGenero() {
         return genero;
     }
 
@@ -24,7 +26,7 @@ public class Categorizacion {
         this.id_categorizacion = id_categorizacion;
     }
 
-    public void setGenero(text genero) {
+    public void setGenero(Text genero) {
         this.genero = genero;
     }
 }

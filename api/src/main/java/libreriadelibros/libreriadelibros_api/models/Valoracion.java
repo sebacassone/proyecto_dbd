@@ -1,14 +1,16 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+import org.w3c.dom.Text;
 
 public class Valoracion {
     private int id_valoracion;
-    private text comentarios;
+    private Text comentarios;
     private int puntuacion;
     private int id_usurio;
     private int id_libro;
 
     //Constructor
-    public Valoracion(int id_valoracion, text comentarios, int puntuacion, int id_usurio, int id_libro) {
+    public Valoracion(int id_valoracion, Text comentarios, int puntuacion, int id_usurio, int id_libro) {
         this.id_valoracion = id_valoracion;
         this.comentarios = comentarios;
         this.puntuacion = puntuacion;
@@ -23,7 +25,7 @@ public class Valoracion {
         return id_valoracion;
     }
 
-    public text getComentarios() {
+    public Text getComentarios() {
         return comentarios;
     }
 
@@ -45,7 +47,7 @@ public class Valoracion {
         this.id_valoracion = id_valoracion;
     }
 
-    public void setComentarios(text comentarios) {
+    public void setComentarios(Text comentarios) {
         this.comentarios = comentarios;
     }
 

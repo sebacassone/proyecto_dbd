@@ -1,10 +1,13 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+
+import java.util.Date;
 
 public class Usuario {
     private int id_usuario;
     private String nombre;
     private String correoElectronico;
-    private date fechaNacimiento;
+    private Date fechaNacimiento;
     private String alias;
     private String contraseña;
     private int id_favoritos;
@@ -12,7 +15,7 @@ public class Usuario {
     private int id_boleta;
 
     //Constructor
-    public Usuario(int id_usuario, String nombre, String correoElectronico, date fechaNacimiento, String alias, String contraseña, int id_favoritos, int id_carrito, int id_boleta) {
+    public Usuario(int id_usuario, String nombre, String correoElectronico, Date fechaNacimiento, String alias, String contraseña, int id_favoritos, int id_carrito, int id_boleta) {
         this.id_usuario = id_usuario;
         this.nombre = nombre;
         this.correoElectronico = correoElectronico;
@@ -37,7 +40,7 @@ public class Usuario {
         return correoElectronico;
     }
 
-    public date getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
@@ -75,7 +78,7 @@ public class Usuario {
         this.correoElectronico = correoElectronico;
     }
 
-    public void setFechaNacimiento(date fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

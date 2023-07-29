@@ -1,12 +1,14 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+import java.math.BigInteger;
 
 public class UsuarioPago {
 
     private int id_usuario;
-    private bigint nroTarjeta;
+    private BigInteger nroTarjeta;
 
     //Constructor
-    public UsuarioPago(int id_usuario, bigint nroTarjeta) {
+    public UsuarioPago(int id_usuario, BigInteger nroTarjeta) {
         this.id_usuario = id_usuario;
         this.nroTarjeta = nroTarjeta;
     }
@@ -17,7 +19,7 @@ public class UsuarioPago {
         return id_usuario;
     }
 
-    public bigint getNroTarjeta() {
+    public BigInteger getNroTarjeta() {
         return nroTarjeta;
     }
 
@@ -27,7 +29,7 @@ public class UsuarioPago {
         this.id_usuario = id_usuario;
     }
 
-    public void setNroTarjeta(bigint nroTarjeta) {
+    public void setNroTarjeta(BigInteger nroTarjeta) {
         this.nroTarjeta = nroTarjeta;
     }
 }

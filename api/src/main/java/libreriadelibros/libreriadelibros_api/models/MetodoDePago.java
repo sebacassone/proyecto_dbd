@@ -1,14 +1,19 @@
-package libreriadelibros.models;
+package libreriadelibros.libreriadelibros_api.models;
+
+
+import org.w3c.dom.Text;
+
+import java.math.BigInteger;
 
 public class MetodoDePago {
-    private bigint nroTarjeta;
-    private text nombre;
-    private text titular;
-    private text cvv;
+    private BigInteger nroTarjeta;
+    private Text nombre;
+    private Text titular;
+    private int cvv;
     private char fechaExpiracion;
 
     //Constructor
-    public MetodoDePago(bigint nroTarjeta, text nombre, text titular, text cvv, char fechaExpiracion) {
+    public MetodoDePago(BigInteger nroTarjeta, Text nombre, Text titular, int cvv, char fechaExpiracion) {
         this.nroTarjeta = nroTarjeta;
         this.nombre = nombre;
         this.titular = titular;
@@ -17,19 +22,19 @@ public class MetodoDePago {
     }
 
     //Getters
-    public bigint getNroTarjeta() {
+    public BigInteger getNroTarjeta() {
         return nroTarjeta;
     }
 
-    public text getNombre() {
+    public Text getNombre() {
         return nombre;
     }
 
-    public text getTitular() {
+    public Text getTitular() {
         return titular;
     }
 
-    public text getCvv() {
+    public int getCvv() {
         return cvv;
     }
 
@@ -39,19 +44,19 @@ public class MetodoDePago {
 
     //Setters
 
-    public void setNroTarjeta(bigint nroTarjeta) {
+    public void setNroTarjeta(BigInteger nroTarjeta) {
         this.nroTarjeta = nroTarjeta;
     }
 
-    public void setNombre(text nombre) {
+    public void setNombre(Text nombre) {
         this.nombre = nombre;
     }
 
-    public void setTitular(text titular) {
+    public void setTitular(Text titular) {
         this.titular = titular;
     }
 
-    public void setCvv(text cvv) {
+    public void setCvv(int cvv) {
         this.cvv = cvv;
     }
 
