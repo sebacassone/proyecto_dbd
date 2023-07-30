@@ -3,17 +3,17 @@ package libreriadelibros.libreriadelibros_api.models;
 import org.w3c.dom.Text;
 
 public class Categorizacion {
-    private int id_categorizacion;
+    private String id_categorizacion;
     private Text genero;
 
     //Constructor
-    public Categorizacion(int id_categorizacion, Text genero) {
+    public Categorizacion(String id_categorizacion, Text genero) {
         this.id_categorizacion = id_categorizacion;
         this.genero = genero;
     }
 
     //Getters
-    public int getId_categorizacion() {
+    public String getId_categorizacion() {
         return id_categorizacion;
     }
 
@@ -22,7 +22,7 @@ public class Categorizacion {
     }
 
     //Setters
-    public void setId_categorizacion(int id_categorizacion) {
+    public void setId_categorizacion(String id_categorizacion) {
         this.id_categorizacion = id_categorizacion;
     }
 

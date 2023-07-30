@@ -4,13 +4,13 @@ import org.w3c.dom.Text;
 
 public class UbicacionGeografica {
 
-    private int id_ubicacion;
+    private String id_ubicacion;
     private Text paisOrigen;
     private Text ciudad;
     private Text codigoPostal;
 
     //Constructor
-    public UbicacionGeografica(int id_ubicacion, Text paisOrigen, Text ciudad, Text codigoPostal) {
+    public UbicacionGeografica(String id_ubicacion, Text paisOrigen, Text ciudad, Text codigoPostal) {
         this.id_ubicacion = id_ubicacion;
         this.paisOrigen = paisOrigen;
         this.ciudad = ciudad;
@@ -18,7 +18,7 @@ public class UbicacionGeografica {
     }
 
     //Getters
-    public int getId_ubicacion() {
+    public String getId_ubicacion() {
         return id_ubicacion;
     }
 
@@ -34,7 +34,7 @@ public class UbicacionGeografica {
         return codigoPostal;
     }
     //Setters
-    public void setId_ubicacion(int id_ubicacion) {
+    public void setId_ubicacion(String id_ubicacion) {
         this.id_ubicacion = id_ubicacion;
     }
 

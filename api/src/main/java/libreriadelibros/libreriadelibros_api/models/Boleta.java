@@ -1,12 +1,12 @@
 package libreriadelibros.libreriadelibros_api.models;
 
 public class Boleta {
-    private int id_boleta;
+    private String id_boleta;
     private int monto;
     private int id_carrito;
 
     //Getters
-    public int getId_boleta() {
+    public String getId_boleta() {
         return id_boleta;
     }
 
@@ -19,7 +19,7 @@ public class Boleta {
     }
 
     //Setters
-    public void setId_boleta(int id_boleta) {
+    public void setId_boleta(String id_boleta) {
         this.id_boleta = id_boleta;
     }
 

@@ -9,9 +9,9 @@ public interface UsuarioRepository {
     Usuario create(Usuario usuario);
     // R
     List<Usuario> getAll();
-    Usuario getBy(int id);
+    List<Usuario> getBy(String id);
     // U
-    String update(Usuario usuario, int id);
+    String update(Usuario usuario, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

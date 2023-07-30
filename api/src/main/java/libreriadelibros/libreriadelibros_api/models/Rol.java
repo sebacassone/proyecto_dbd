@@ -3,12 +3,12 @@ package libreriadelibros.libreriadelibros_api.models;
 import org.w3c.dom.Text;
 
 public class Rol {
-    private int id_rol;
+    private String id_rol;
     private Text nombreRol;
-    private int id_usuario;
+    private String id_usuario;
 
     //Constructor
-    public Rol(int id_rol, Text nombreRol, int id_usuario) {
+    public Rol(String id_rol, Text nombreRol, String id_usuario) {
         this.id_rol = id_rol;
         this.nombreRol = nombreRol;
         this.id_usuario = id_usuario;
@@ -17,7 +17,7 @@ public class Rol {
 
     // Getters
 
-    public int getId_rol() {
+    public String getId_rol() {
         return id_rol;
     }
 
@@ -25,12 +25,12 @@ public class Rol {
         return nombreRol;
     }
 
-    public int getId_usuario() {
+    public String getId_usuario() {
         return id_usuario;
     }
     // Setters
 
-    public void setId_rol(int id_rol) {
+    public void setId_rol(String id_rol) {
         this.id_rol = id_rol;
     }
 
@@ -38,7 +38,7 @@ public class Rol {
         this.nombreRol = nombreRol;
     }
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(String id_usuario) {
         this.id_usuario = id_usuario;
     }
 }

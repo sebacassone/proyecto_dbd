@@ -9,9 +9,9 @@ public interface CarritoLibroRepository {
     CarritoLibro create(CarritoLibro CarritoLibro);
     // R
     List<CarritoLibro> getAll();
-    CarritoLibro getBy(int id);
-    // U
-    String update(CarritoLibro CarritoLibro, int id);
+    List<CarritoLibro> getBy(String id);
+    //
+    String update(CarritoLibro CarritoLibro, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

@@ -9,9 +9,9 @@ public interface UbicacionGeograficaRepository {
     UbicacionGeografica create(UbicacionGeografica ubicacionGeografica);
     // R
     List<UbicacionGeografica> getAll();
-    UbicacionGeografica getBy(int id);
+    List<UbicacionGeografica> getBy(String id);
     // U
-    String update(UbicacionGeografica ubicacionGeografica, int id);
+    String update(UbicacionGeografica ubicacionGeografica, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

@@ -4,32 +4,32 @@ import java.math.BigInteger;
 
 public class UsuarioPago {
 
-    private int id_usuario;
-    private BigInteger nroTarjeta;
+    private String id_usuario;
+    private String nroTarjeta;
 
     //Constructor
-    public UsuarioPago(int id_usuario, BigInteger nroTarjeta) {
+    public UsuarioPago(String id_usuario, String nroTarjeta) {
         this.id_usuario = id_usuario;
         this.nroTarjeta = nroTarjeta;
     }
 
     //Getters
 
-    public int getId_usuario() {
+    public String getId_usuario() {
         return id_usuario;
     }
 
-    public BigInteger getNroTarjeta() {
+    public String getNroTarjeta() {
         return nroTarjeta;
     }
 
     //Setters
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(String id_usuario) {
         this.id_usuario = id_usuario;
     }
 
-    public void setNroTarjeta(BigInteger nroTarjeta) {
+    public void setNroTarjeta(String nroTarjeta) {
         this.nroTarjeta = nroTarjeta;
     }
 }

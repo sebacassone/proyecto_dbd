@@ -10,9 +10,9 @@ public interface CategorizacionLibroRepository {
     CategorizacionLibro create(CategorizacionLibro categorizacionLibro);
     // R
     List<CategorizacionLibro> getAll();
-    CategorizacionLibro getBy(int id);
+    List<CategorizacionLibro> getBy(String id);
     // U
-    CategorizacionLibro update(CategorizacionLibro categorizacionLibro, int id);
+    String update(CategorizacionLibro categorizacionLibro, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

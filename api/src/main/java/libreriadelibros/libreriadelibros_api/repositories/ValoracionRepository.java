@@ -8,9 +8,9 @@ public interface ValoracionRepository {
     Valoracion create(Valoracion valoracion);
     // R
     List<Valoracion> getAll();
-    Valoracion getBy(int id);
+    List<Valoracion> getBy(String id);
     // U
-    String update(Valoracion valoracion, int id);
+    String update(Valoracion valoracion, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

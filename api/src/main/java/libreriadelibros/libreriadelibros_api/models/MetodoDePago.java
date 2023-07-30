@@ -6,14 +6,14 @@ import org.w3c.dom.Text;
 import java.math.BigInteger;
 
 public class MetodoDePago {
-    private BigInteger nroTarjeta;
+    private String nroTarjeta;
     private Text nombre;
     private Text titular;
     private int cvv;
     private char fechaExpiracion;
 
     //Constructor
-    public MetodoDePago(BigInteger nroTarjeta, Text nombre, Text titular, int cvv, char fechaExpiracion) {
+    public MetodoDePago(String nroTarjeta, Text nombre, Text titular, int cvv, char fechaExpiracion) {
         this.nroTarjeta = nroTarjeta;
         this.nombre = nombre;
         this.titular = titular;
@@ -22,7 +22,7 @@ public class MetodoDePago {
     }
 
     //Getters
-    public BigInteger getNroTarjeta() {
+    public String getNroTarjeta() {
         return nroTarjeta;
     }
 
@@ -44,7 +44,7 @@ public class MetodoDePago {
 
     //Setters
 
-    public void setNroTarjeta(BigInteger nroTarjeta) {
+    public void setNroTarjeta(String nroTarjeta) {
         this.nroTarjeta = nroTarjeta;
     }
 

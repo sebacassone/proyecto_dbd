@@ -2,18 +2,18 @@ package libreriadelibros.libreriadelibros_api.models;
 
 public class Libro {
     // Atributos
-    private int id_libro;
+    private String id_libro;
     private String titulo;
     private int stock;
     private int precio;
     private int vistas;
     private String link;
     private String idioma;
-    private int id_restriccion;
-    private int id_ubicacion;
+    private String id_restriccion;
+    private String id_ubicacion;
 
     //Constructor
-    public Libro(int id_libro, String titulo, int stock, int precio, int vistas, String link, String idioma, int id_restriccion, int id_ubicacion) {
+    public Libro(String id_libro, String titulo, int stock, int precio, int vistas, String link, String idioma, String id_restriccion, String id_ubicacion) {
         this.id_libro = id_libro;
         this.titulo = titulo;
         this.stock = stock;
@@ -26,7 +26,7 @@ public class Libro {
     }
 
     // Getters
-    public int getId_libro() {
+    public String getId_libro() {
         return id_libro;
     }
 
@@ -54,16 +54,16 @@ public class Libro {
         return idioma;
     }
 
-    public int getId_restriccion() {
+    public String getId_restriccion() {
         return id_restriccion;
     }
 
-    public int getId_ubicacion() {
+    public String getId_ubicacion() {
         return id_ubicacion;
     }
 
     // Setters
-    public void setId_libro(int id_libro) {
+    public void setId_libro(String id_libro) {
         this.id_libro = id_libro;
     }
 
@@ -91,11 +91,11 @@ public class Libro {
         this.idioma = idioma;
     }
 
-    public void setId_restriccion(int id_restriccion) {
+    public void setId_restriccion(String id_restriccion) {
         this.id_restriccion = id_restriccion;
     }
 
-    public void setId_ubicacion(int id_ubicacion) {
+    public void setId_ubicacion(String id_ubicacion) {
         this.id_ubicacion = id_ubicacion;
     }
 }

@@ -9,9 +9,9 @@ public interface RestriccionEdadRespository {
     RestriccionEdad create(RestriccionEdad restriccionEdad);
     // R
     List<RestriccionEdad> getAll();
-    RestriccionEdad getBy(int id);
+    List<RestriccionEdad> getBy(String id);
     // U
-    String update(RestriccionEdad restriccionEdad, int id);
+    String update(RestriccionEdad restriccionEdad, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

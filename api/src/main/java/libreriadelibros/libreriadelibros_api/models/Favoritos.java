@@ -1,18 +1,18 @@
 package libreriadelibros.libreriadelibros_api.models;
 
 public class Favoritos {
-    private int id_favoritos;
+    private String id_favoritos;
 
     private int cantidadLibros;
 
     //Constructor
-    public Favoritos(int id_favoritos, int cantidadLibros) {
+    public Favoritos(String id_favoritos, int cantidadLibros) {
         this.id_favoritos = id_favoritos;
         this.cantidadLibros = cantidadLibros;
     }
 
     //Getters
-    public int getId_favoritos() {
+    public String getId_favoritos() {
         return id_favoritos;
     }
 
@@ -20,7 +20,7 @@ public class Favoritos {
         return cantidadLibros;
     }
     //Setters
-    public void setId_favoritos(int id_favoritos) {
+    public void setId_favoritos(String id_favoritos) {
         this.id_favoritos = id_favoritos;
     }
 

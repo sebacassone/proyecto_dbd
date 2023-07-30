@@ -9,9 +9,9 @@ public interface RolRepository {
     Rol create(Rol rol);
     // R
     List<Rol> getAll();
-    Rol getBy(int id);
+    List<Rol> getBy(String id);
     // U
-    String update(Rol rol, int id);
+    String update(Rol rol, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

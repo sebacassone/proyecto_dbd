@@ -4,23 +4,23 @@ import java.math.BigInteger;
 
 public class CarritoCompra {
 
-    private int id_carrito;
+    private String id_carrito;
     private boolean estado;
     private BigInteger nroTarjeta;
 
     //Constructor
-    public CarritoCompra(int id_carrito, boolean estado, BigInteger nroTarjeta) {
+    public CarritoCompra(String id_carrito, boolean estado, BigInteger nroTarjeta) {
         this.id_carrito = id_carrito;
         this.estado = estado;
         this.nroTarjeta = nroTarjeta;
     }
 
     //Getters
-    public int getId_carrito() {
+    public String getId_carrito() {
         return id_carrito;
     }
 
-    public boolean isEstado() {
+    public boolean getEstado() {
         return estado;
     }
 
@@ -29,7 +29,7 @@ public class CarritoCompra {
     }
 
     //Setters
-    public void setId_carrito(int id_carrito) {
+    public void setId_carrito(String id_carrito) {
         this.id_carrito = id_carrito;
     }
 

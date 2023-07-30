@@ -10,9 +10,9 @@ public interface UsuarioPagoRepository {
     UsuarioPago create(UsuarioPago usuarioPago);
     // R
     List<UsuarioPago> getAll();
-    UsuarioPago getBy(int id);
+    List<UsuarioPago> getBy(String id);
     // U
-    String update(UsuarioPago usuarioPago, int id);
+    String update(UsuarioPago usuarioPago, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

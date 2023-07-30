@@ -9,9 +9,9 @@ public interface LibroRepository {
     Libro create(Libro libro);
     // R
     List<Libro> getAll();
-    Libro getBy(int it);
+    List<Libro> getBy(String id);
     // U
-    String update(Libro libro, int id);
+    String update(Libro libro, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

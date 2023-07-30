@@ -9,9 +9,9 @@ public interface FavoritosLibrosRepository {
     FavoritosLibro create(FavoritosLibro favoritosLibro);
     // R
     List<FavoritosLibro> getAll();
-    FavoritosLibro getBy(int id);
+    List<FavoritosLibro> getBy(String id);
     // U
-    String update(FavoritosLibro favoritosLibro, int id);
+    String update(FavoritosLibro favoritosLibro, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

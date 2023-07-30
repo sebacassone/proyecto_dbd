@@ -9,9 +9,9 @@ public interface MetodoDePagoRepository {
     MetodoDePago create(MetodoDePago metodoDePago);
     // R
     List<MetodoDePago> getAll();
-    MetodoDePago getBy(int id);
+    List<MetodoDePago> getBy(String id);
     // U
-    String update(MetodoDePago metodoDePago, int id);
+    String update(MetodoDePago metodoDePago, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

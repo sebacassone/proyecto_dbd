@@ -8,10 +8,10 @@ public interface CarritoCompraRepository {
     // C
     CarritoCompra create(CarritoCompra Carrito);
     // R
-    List<CarritoCompra> getAll(int id);
-    CarritoCompra getBy(CarritoCompra Carrito, int id);
+    List<CarritoCompra> getAll();
+    List<CarritoCompra> getBy(CarritoCompra Carrito, String id);
     // U
-    String update(CarritoCompra Carrito, int id);
+    String update(CarritoCompra Carrito, String id);
     // D
-    void delete(int id);
+    void delete(String id);
 }

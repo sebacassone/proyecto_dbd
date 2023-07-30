@@ -4,18 +4,18 @@ package libreriadelibros.libreriadelibros_api.models;
 import java.util.Date;
 
 public class Usuario {
-    private int id_usuario;
+    private String id_usuario;
     private String nombre;
     private String correoElectronico;
     private Date fechaNacimiento;
     private String alias;
     private String contraseña;
-    private int id_favoritos;
-    private int id_carrito;
-    private int id_boleta;
+    private String id_favoritos;
+    private String id_carrito;
+    private String id_boleta;
 
     //Constructor
-    public Usuario(int id_usuario, String nombre, String correoElectronico, Date fechaNacimiento, String alias, String contraseña, int id_favoritos, int id_carrito, int id_boleta) {
+    public Usuario(String id_usuario, String nombre, String correoElectronico, Date fechaNacimiento, String alias, String contraseña, String id_favoritos, String id_carrito, String id_boleta) {
         this.id_usuario = id_usuario;
         this.nombre = nombre;
         this.correoElectronico = correoElectronico;
@@ -28,7 +28,7 @@ public class Usuario {
     }
 
     // Getters
-    public int getId_usuario() {
+    public String getId_usuario() {
         return id_usuario;
     }
 
@@ -52,21 +52,21 @@ public class Usuario {
         return contraseña;
     }
 
-    public int getId_favoritos() {
+    public String getId_favoritos() {
         return id_favoritos;
     }
 
-    public int getId_carrito() {
+    public String getId_carrito() {
         return id_carrito;
     }
 
-    public int getId_boleta() {
+    public String getId_boleta() {
         return id_boleta;
     }
 
     // Setters
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(String id_usuario) {
         this.id_usuario = id_usuario;
     }
 
@@ -90,15 +90,15 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public void setId_favoritos(int id_favoritos) {
+    public void setId_favoritos(String id_favoritos) {
         this.id_favoritos = id_favoritos;
     }
 
-    public void setId_carrito(int id_carrito) {
+    public void setId_carrito(String id_carrito) {
         this.id_carrito = id_carrito;
     }
 
-    public void setId_boleta(int id_boleta) {
+    public void setId_boleta(String id_boleta) {
         this.id_boleta = id_boleta;
     }
 }

@@ -3,14 +3,14 @@ package libreriadelibros.libreriadelibros_api.models;
 import org.w3c.dom.Text;
 
 public class Valoracion {
-    private int id_valoracion;
+    private String id_valoracion;
     private Text comentarios;
     private int puntuacion;
-    private int id_usurio;
-    private int id_libro;
+    private String id_usurio;
+    private String id_libro;
 
     //Constructor
-    public Valoracion(int id_valoracion, Text comentarios, int puntuacion, int id_usurio, int id_libro) {
+    public Valoracion(String id_valoracion, Text comentarios, int puntuacion, String id_usurio, String id_libro) {
         this.id_valoracion = id_valoracion;
         this.comentarios = comentarios;
         this.puntuacion = puntuacion;
@@ -21,7 +21,7 @@ public class Valoracion {
 
     //Getters
 
-    public int getId_valoracion() {
+    public String getId_valoracion() {
         return id_valoracion;
     }
 
@@ -33,17 +33,17 @@ public class Valoracion {
         return puntuacion;
     }
 
-    public int getId_usurio() {
+    public String getId_usurio() {
         return id_usurio;
     }
 
-    public int getId_libro() {
+    public String getId_libro() {
         return id_libro;
     }
 
     //Setters
 
-    public void setId_valoracion(int id_valoracion) {
+    public void setId_valoracion(String id_valoracion) {
         this.id_valoracion = id_valoracion;
     }
 
@@ -55,11 +55,11 @@ public class Valoracion {
         this.puntuacion = puntuacion;
     }
 
-    public void setId_usurio(int id_usurio) {
+    public void setId_usurio(String id_usurio) {
         this.id_usurio = id_usurio;
     }
 
-    public void setId_libro(int id_libro) {
+    public void setId_libro(String id_libro) {
         this.id_libro = id_libro;
     }
 }
