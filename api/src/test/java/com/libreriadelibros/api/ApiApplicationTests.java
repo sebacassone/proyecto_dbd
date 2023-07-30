@@ -1,10 +1,10 @@
-package libreriadelibros.libreriadelibros_api;
+package com.libreriadelibros.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LibreriadelibrosApiApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
