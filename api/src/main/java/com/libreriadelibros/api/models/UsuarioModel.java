@@ -93,6 +93,14 @@ public class UsuarioModel {
         this.favoritos = favoritos;
     }
 
+    public RolModel getRolUsuario() {
+        return rolUsuario;
+    }
+
+    public void setRolUsuario(RolModel rolUsuario) {
+        this.rolUsuario = rolUsuario;
+    }
+
     public List<CarritoModel> getCarritos() {
         return carritos;
     }

@@ -46,9 +46,19 @@ public class UsuarioService {
         }
     }
 
+
     public String delete(Long id){
         usuarioRepository.deleteById(id);
         return "Usuario borrado correctamente";
+    }
+
+    public String updateUser(UsuarioModel usuario){
+        String rol = usuario.getRolUsuario().getNombreRol();
+        if(rol == "lector"){
+            usuarioRepository.update(usuario, usuario.getIdUsuario());
+            return "Usuario actualizado correctamente";
+        }
+        return "Debe ser usuario lector para poder actualizar sus datos";
     }
 
 

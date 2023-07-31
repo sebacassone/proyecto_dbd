@@ -19,4 +19,6 @@ public interface LibroRepository extends CrudRepository<LibroModel, Long> {
 
     String delete(Long id);
 
+    List<LibroModel> ranking();
+
 }
