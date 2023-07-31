@@ -9,14 +9,5 @@ import java.util.List;
 @Repository
 public interface FavoritosRepository extends CrudRepository<FavoritosModel, Long> {
 
-    FavoritosModel create(FavoritosModel favoritos);
-
-    List<FavoritosModel> getAll();
-
-    FavoritosModel show(Long id);
-
-    String update(FavoritosModel favoritos, Long id);
-
-    String delete(Long id);
 
 }

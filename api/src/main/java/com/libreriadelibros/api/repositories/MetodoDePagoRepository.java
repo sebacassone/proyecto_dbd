@@ -9,15 +9,6 @@ import java.util.List;
 @Repository
 public interface MetodoDePagoRepository extends CrudRepository<MetodoDePagoModel, Long> {
 
-    MetodoDePagoModel create(MetodoDePagoModel metodoDePago);
-
-    List<MetodoDePagoModel> getAll();
-
-    MetodoDePagoModel show(Long id);
-
-    String update(MetodoDePagoModel metodoDePago, Long id);
-
-    String delete(Long id);
 
 
 }

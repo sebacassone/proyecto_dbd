@@ -30,16 +30,7 @@ public class UsuarioService {
         UsuarioModel usuarioUpdated;
         try {
             usuarioUpdated = show(id);
-            usuarioUpdated.setNombre(usuario.getNombre());
-            usuarioUpdated.setCorreoElectronico(usuario.getCorreoElectronico());
-            usuarioUpdated.setFechaNacimiento(usuario.getFechaNacimiento());
-            usuarioUpdated.setContrasena(usuario.getContrasena());
-            usuarioUpdated.setFavoritos(usuario.getFavoritos());
-            usuarioUpdated.setCarritos(usuario.getCarritos());
-            usuarioUpdated.setBoletas(usuario.getBoletas());
-            usuarioUpdated.setLibros(usuario.getLibros());
-            usuarioUpdated.setMetodosDePago(usuario.getMetodosDePago());
-            usuarioRepository.save(usuarioUpdated);
+            updateUsuarioPrivate(usuario, usuarioUpdated);
             return "Usuario actualizada";
         }catch (Exception e){
             return "No existe el usuario de id:" + id;
@@ -54,16 +45,31 @@ public class UsuarioService {
 
     public String updateUser(UsuarioModel usuario){
         String rol = usuario.getRolUsuario().getNombreRol();
+        UsuarioModel usuarioUpdated;
         if(rol == "lector"){
-            usuarioRepository.update(usuario, usuario.getIdUsuario());
+            usuarioUpdated = show(usuario.getIdUsuario());
+            updateUsuarioPrivate(usuario, usuarioUpdated);
             return "Usuario actualizado correctamente";
         }
         return "Debe ser usuario lector para poder actualizar sus datos";
     }
 
+    private void updateUsuarioPrivate(UsuarioModel usuario, UsuarioModel usuarioUpdated) {
+        usuarioUpdated.setNombre(usuario.getNombre());
+        usuarioUpdated.setCorreoElectronico(usuario.getCorreoElectronico());
+        usuarioUpdated.setFechaNacimiento(usuario.getFechaNacimiento());
+        usuarioUpdated.setContrasena(usuario.getContrasena());
+        usuarioUpdated.setFavoritos(usuario.getFavoritos());
+        usuarioUpdated.setCarritos(usuario.getCarritos());
+        usuarioUpdated.setBoletas(usuario.getBoletas());
+        usuarioUpdated.setLibros(usuario.getLibros());
+        usuarioUpdated.setMetodosDePago(usuario.getMetodosDePago());
+        usuarioRepository.save(usuarioUpdated);
+    }
+
     public String login(String correo, String pass){
 
-        List<UsuarioModel> users = usuarioRepository.getAll();
+        List<UsuarioModel> users = (List<UsuarioModel>) usuarioRepository.findAll();
         for(int i = 0; i < users.size(); i++){
             if(users.get(i).getCorreoElectronico() == correo && users.get(i).getContrasena()==pass)
                 return  "Inicio de sesion exitoso";

@@ -9,14 +9,5 @@ import java.util.List;
 @Repository
 public interface UsuarioLibroRepository extends CrudRepository<UsuarioLibroModel, Long> {
 
-    UsuarioLibroModel create(UsuarioLibroModel usuarioLibro);
-
-    List<UsuarioLibroModel> getAll();
-
-    UsuarioLibroModel show(Long id);
-
-    String update(UsuarioLibroModel usuarioLibro, Long id);
-
-    String delete(Long id);
 
 }

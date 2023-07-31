@@ -50,13 +50,13 @@ public class ValoracionService {
 
     public String createOnlyIfNotExist(ValoracionModel valoracion, UsuarioModel usuario, LibroModel libro){
 
-        List<ValoracionModel> valoraciones = valoracionRepository.getAll();
+        List<ValoracionModel> valoraciones = (List<ValoracionModel>) valoracionRepository.findAll();
 
         for(int i = 0; i < valoraciones.size(); i++){
             if((valoraciones.get(i).getUsuario().getIdUsuario() == usuario.getIdUsuario() && valoraciones.get(i).getLibro().getIdLibro() == libro.getIdLibro()))
                 return "Solo se permite una valoracion por usuario!";
         }
-        valoracionRepository.create(valoracion);
+        valoracionRepository.save(valoracion);
         return "Valoracion agregada correctamente";
     }
 

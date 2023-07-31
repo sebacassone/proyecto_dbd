@@ -9,14 +9,5 @@ import java.util.List;
 @Repository
 public interface RestriccionEdadRepository extends CrudRepository<RestriccionEdadModel, Long> {
 
-    RestriccionEdadModel create(RestriccionEdadModel restriccionEdad);
-
-    List<RestriccionEdadModel> getAll();
-
-    RestriccionEdadModel show(Long id);
-
-    String update(RestriccionEdadModel restriccionEdad, Long id);
-
-    String delete(Long id);
 
 }

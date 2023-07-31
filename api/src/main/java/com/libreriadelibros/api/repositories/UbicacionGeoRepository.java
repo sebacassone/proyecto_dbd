@@ -9,14 +9,5 @@ import java.util.List;
 @Repository
 public interface UbicacionGeoRepository extends CrudRepository<UbicacionGeoModel, Long> {
 
-    UbicacionGeoModel create(UbicacionGeoModel ubicacionGeo);
-
-    List<UbicacionGeoModel> getAll();
-
-    UbicacionGeoModel show(Long id);
-
-    String update(UbicacionGeoModel ubicacionGeo, Long id);
-
-    String delete(Long id);
 
 }

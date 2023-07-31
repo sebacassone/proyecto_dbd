@@ -29,6 +29,10 @@ public class UbicacionGeoModel {
         this.codigoPostal = codigoPostal;
     }
 
+    public UbicacionGeoModel() {
+
+    }
+
     public Long getIdUbicacionGeo() {
         return idUbicacionGeo;
     }

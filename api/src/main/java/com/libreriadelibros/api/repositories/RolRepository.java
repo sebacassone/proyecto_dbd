@@ -9,14 +9,5 @@ import java.util.List;
 @Repository
 public interface RolRepository extends CrudRepository<RolModel, Long> {
 
-    RolModel create(RolModel boleta);
-
-    List<RolModel> getAll();
-
-    RolModel show(Long id);
-
-    String update(RolModel rol, Long id);
-
-    String delete(Long id);
 
 }

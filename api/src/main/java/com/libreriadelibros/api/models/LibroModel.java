@@ -64,6 +64,10 @@ public class LibroModel {
         this.idUbicacionGeo = idUbicacionGeo;
     }
 
+    public LibroModel() {
+
+    }
+
     public Long getIdLibro() {
         return idLibro;
     }

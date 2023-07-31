@@ -56,7 +56,7 @@ public class LibroService {
     }
 
     public List<LibroModel> ranking() {
-        List<LibroModel> libros = libroRepository.getAll();
+        List<LibroModel> libros = (List<LibroModel>) libroRepository.findAll();
         libros.sort(new Comparator<LibroModel>() {
             @Override
             public int compare(LibroModel libro1, LibroModel libro2) {
@@ -71,8 +71,8 @@ public class LibroService {
     public List<Integer> promLibByAutor(){
 
         UsuarioRepository usuarioRepository = null;
-        List<UsuarioModel> users = usuarioRepository.getAll();
-        List<LibroModel> libros = libroRepository.getAll();
+        List<UsuarioModel> users = (List<UsuarioModel>) usuarioRepository.findAll();
+        List<LibroModel> libros = (List<LibroModel>) libroRepository.findAll();
 
         int cantidad = libros.size();
 
@@ -101,7 +101,7 @@ public class LibroService {
 
         int edad = hoy.get(Calendar.YEAR) - fechaNacimientoCal.get(Calendar.YEAR);
 
-        List<LibroModel> libros = libroRepository.getAll();
+        List<LibroModel> libros = (List<LibroModel>) libroRepository.findAll();
 
         if(edad < 18) {
             for (int i = 0; i < libros.size(); i++) {
@@ -116,7 +116,7 @@ public class LibroService {
     public String createIfAutor(UsuarioModel user, LibroModel libro){
 
         if(user.getRolUsuario().getNombreRol() == "autor"){
-            libroRepository.create(libro);
+            libroRepository.save(libro);
             return "libro creado";
         }
         else{

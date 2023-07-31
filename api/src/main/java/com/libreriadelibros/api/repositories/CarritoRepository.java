@@ -8,15 +8,4 @@ import java.util.List;
 
 @Repository
 public interface CarritoRepository extends CrudRepository<CarritoModel, Long> {
-
-    CarritoModel create(CarritoModel boleta);
-
-    List<CarritoModel> getAll();
-
-    CarritoModel show(Long id);
-
-    String update(CarritoModel carrito, Long id);
-
-    String delete(Long id);
-
 }

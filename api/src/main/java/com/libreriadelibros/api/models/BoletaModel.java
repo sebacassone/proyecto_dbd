@@ -31,6 +31,10 @@ public class BoletaModel {
         this.carrito = carrito;
     }
 
+    public BoletaModel() {
+
+    }
+
     public Long getIdBoleta() {
         return idBoleta;
     }
