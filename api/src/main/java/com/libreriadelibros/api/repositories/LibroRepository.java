@@ -1,6 +1,7 @@
 package com.libreriadelibros.api.repositories;
 
 import com.libreriadelibros.api.models.LibroModel;
+import com.libreriadelibros.api.models.UsuarioModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -21,4 +22,9 @@ public interface LibroRepository extends CrudRepository<LibroModel, Long> {
 
     List<LibroModel> ranking();
 
+    List<Integer> promLibByAutor();
+
+    List<LibroModel> showByAge(UsuarioModel usuario);
+
+    String createIfAutor(UsuarioModel user, LibroModel libro);
 }

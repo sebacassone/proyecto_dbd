@@ -50,5 +50,7 @@ public class UsuarioController {
     }
 
 
+    @GetMapping("/login/{correo}/{pass}")
+    public ResponseEntity<String> login(@PathVariable String correo, @PathVariable String pass) {return ResponseEntity.ok(usuarioService.login(correo, pass));}
 
 }

@@ -61,6 +61,17 @@ public class UsuarioService {
         return "Debe ser usuario lector para poder actualizar sus datos";
     }
 
+    public String login(String correo, String pass){
+
+        List<UsuarioModel> users = usuarioRepository.getAll();
+        for(int i = 0; i < users.size(); i++){
+            if(users.get(i).getCorreoElectronico() == correo && users.get(i).getContrasena()==pass)
+                return  "Inicio de sesion exitoso";
+            else
+                return "Usuario o contraseña incorrectos";
+        }
+        return null;
+    }
 
 
 }

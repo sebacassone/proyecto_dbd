@@ -1,6 +1,7 @@
 package com.libreriadelibros.api.controllers;
 
 import com.libreriadelibros.api.models.LibroModel;
+import com.libreriadelibros.api.models.UsuarioModel;
 import com.libreriadelibros.api.services.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,6 +50,20 @@ public class LibroController {
     public ResponseEntity<String> delete(@PathVariable Long id){
         return ResponseEntity.ok(libroService.delete(id));
     }
-    
+
+    @GetMapping("/ranking")
+    public ResponseEntity<List<LibroModel>> ranking(){return ResponseEntity.ok(libroService.ranking());}
+
+    @GetMapping("/promLibByAutor")
+    public ResponseEntity<List<Integer>> promLibByAutor(){return ResponseEntity.ok(libroService.promLibByAutor());}
+
+    @GetMapping("/showByAge/{user}")
+    public ResponseEntity<List<LibroModel>> showByAge(@PathVariable UsuarioModel user){return ResponseEntity.ok(libroService.showByAge(user));}
+
+
+    @PostMapping("/createIfAutor/{user}/{libro}")
+    public ResponseEntity<String> createIfAutor(@PathVariable UsuarioModel user,@PathVariable LibroModel libro) {return ResponseEntity.ok(libroService.createIfAutor(user, libro));}
+
+
 
 }

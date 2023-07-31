@@ -19,7 +19,7 @@ public interface UsuarioRepository extends CrudRepository<UsuarioModel, Long> {
 
     String delete(Long id);
 
-
+    String login(String correo, String pass);
 
 
 }

@@ -72,8 +72,8 @@ public class LibroService {
 
         UsuarioRepository usuarioRepository = null;
         List<UsuarioModel> users = usuarioRepository.getAll();
-
         List<LibroModel> libros = libroRepository.getAll();
+
         int cantidad = libros.size();
 
         List<Integer> prom = null;
@@ -113,6 +113,16 @@ public class LibroService {
     }
 
 
+    public String createIfAutor(UsuarioModel user, LibroModel libro){
 
-    
+        if(user.getRolUsuario().getNombreRol() == "autor"){
+            libroRepository.create(libro);
+            return "libro creado";
+        }
+        else{
+            return  "fallo al crear libro, tipo de usuario incorrecto";
+        }
+    }
+
+
 }
