@@ -75,4 +75,12 @@ public class CarritoModel {
     public void setNumeroTarjeta(MetodoDePagoModel numeroTarjeta) {
         this.numeroTarjeta = numeroTarjeta;
     }
+
+    public List<LibroModel> getLibrosCarrito() {
+        return librosCarrito;
+    }
+
+    public void setLibrosCarrito(List<LibroModel> librosCarrito) {
+        this.librosCarrito = librosCarrito;
+    }
 }

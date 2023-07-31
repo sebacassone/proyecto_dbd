@@ -34,4 +34,27 @@ public class FavoritosModel {
     )
     private List<LibroModel> librosFav;
 
+    public Integer getIdFavoritos() {
+        return idFavoritos;
+    }
+
+    public void setIdFavoritos(Integer idFavoritos) {
+        this.idFavoritos = idFavoritos;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public List<LibroModel> getLibrosFav() {
+        return librosFav;
+    }
+
+    public void setLibrosFav(List<LibroModel> librosFav) {
+        this.librosFav = librosFav;
+    }
 }

@@ -43,7 +43,6 @@ public class LibroModel {
     @JsonIgnore
     @ManyToMany(mappedBy = "librosFav")
     private List<FavoritosModel> favoritos;
-
     @JsonIgnore
     @ManyToMany(mappedBy = "librosCarrito")
     private List<CarritoModel> carritos;
@@ -135,5 +134,37 @@ public class LibroModel {
 
     public void setIdUbicacionGeo(UbicacionGeoModel idUbicacionGeo) {
         this.idUbicacionGeo = idUbicacionGeo;
+    }
+
+    public List<CategorizacionModel> getCategorizaciones() {
+        return categorizaciones;
+    }
+
+    public void setCategorizaciones(List<CategorizacionModel> categorizaciones) {
+        this.categorizaciones = categorizaciones;
+    }
+
+    public List<FavoritosModel> getFavoritos() {
+        return favoritos;
+    }
+
+    public void setFavoritos(List<FavoritosModel> favoritos) {
+        this.favoritos = favoritos;
+    }
+
+    public List<CarritoModel> getCarritos() {
+        return carritos;
+    }
+
+    public void setCarritos(List<CarritoModel> carritos) {
+        this.carritos = carritos;
+    }
+
+    public List<UsuarioLibroModel> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<UsuarioLibroModel> usuarios) {
+        this.usuarios = usuarios;
     }
 }

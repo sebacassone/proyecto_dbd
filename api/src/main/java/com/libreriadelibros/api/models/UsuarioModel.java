@@ -44,4 +44,84 @@ public class UsuarioModel {
     @JsonIgnore
     @ManyToMany(mappedBy = "usuariosMetodoPago")
     private List<MetodoDePagoModel> metodosDePago;
+
+    public Integer getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public List<FavoritosModel> getFavoritos() {
+        return favoritos;
+    }
+
+    public void setFavoritos(List<FavoritosModel> favoritos) {
+        this.favoritos = favoritos;
+    }
+
+    public List<CarritoModel> getCarritos() {
+        return carritos;
+    }
+
+    public void setCarritos(List<CarritoModel> carritos) {
+        this.carritos = carritos;
+    }
+
+    public List<BoletaModel> getBoletas() {
+        return boletas;
+    }
+
+    public void setBoletas(List<BoletaModel> boletas) {
+        this.boletas = boletas;
+    }
+
+    public List<UsuarioLibroModel> getLibros() {
+        return libros;
+    }
+
+    public void setLibros(List<UsuarioLibroModel> libros) {
+        this.libros = libros;
+    }
+
+    public List<MetodoDePagoModel> getMetodosDePago() {
+        return metodosDePago;
+    }
+
+    public void setMetodosDePago(List<MetodoDePagoModel> metodosDePago) {
+        this.metodosDePago = metodosDePago;
+    }
 }

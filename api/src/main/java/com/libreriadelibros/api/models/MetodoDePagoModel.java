@@ -88,4 +88,12 @@ public class MetodoDePagoModel {
     public void setFechaExpiracion(String fechaExpiracion) {
         this.fechaExpiracion = fechaExpiracion;
     }
+
+    public List<UsuarioModel> getUsuariosMetodoPago() {
+        return usuariosMetodoPago;
+    }
+
+    public void setUsuariosMetodoPago(List<UsuarioModel> usuariosMetodoPago) {
+        this.usuariosMetodoPago = usuariosMetodoPago;
+    }
 }
