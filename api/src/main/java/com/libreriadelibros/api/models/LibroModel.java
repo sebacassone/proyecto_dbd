@@ -12,7 +12,7 @@ public class LibroModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Libro", nullable = false)
-    private Integer idLibro;
+    private Long idLibro;
     @Column(name="Titulo")
     private String titulo;
     @Column(name="Stock")
@@ -52,7 +52,7 @@ public class LibroModel {
     private List<UsuarioLibroModel> usuarios;
 
 
-    public LibroModel(Integer idLibro, String titulo, Integer stock, Integer precio, Integer vistas, String link, String idioma, RestriccionEdadModel idRestriccionEdad, UbicacionGeoModel idUbicacionGeo) {
+    public LibroModel(Long idLibro, String titulo, Integer stock, Integer precio, Integer vistas, String link, String idioma, RestriccionEdadModel idRestriccionEdad, UbicacionGeoModel idUbicacionGeo) {
         this.idLibro = idLibro;
         this.titulo = titulo;
         this.stock = stock;
@@ -64,11 +64,11 @@ public class LibroModel {
         this.idUbicacionGeo = idUbicacionGeo;
     }
 
-    public Integer getIdLibro() {
+    public Long getIdLibro() {
         return idLibro;
     }
 
-    public void setIdLibro(Integer idLibro) {
+    public void setIdLibro(Long idLibro) {
         this.idLibro = idLibro;
     }
 

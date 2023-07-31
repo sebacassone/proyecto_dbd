@@ -10,17 +10,17 @@ public class RolModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_Rol", nullable = false)
-    private Integer idRol;
+    private Long idRol;
     private String nombreRol;
     // Relación de uno es a muchos
     @OneToMany(mappedBy = "rolUsuario")
     private List<UsuarioModel> usuariosRol;
 
-    public Integer getIdRol() {
+    public Long getIdRol() {
         return idRol;
     }
 
-    public void setIdRol(Integer idRol) {
+    public void setIdRol(Long idRol) {
         this.idRol = idRol;
     }
 

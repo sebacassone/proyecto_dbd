@@ -9,7 +9,7 @@ public class BoletaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_Boleta", nullable = false)
-    private Integer idBoleta;
+    private Long idBoleta;
     @Column(name="Monto")
     private Integer monto;
 
@@ -25,17 +25,17 @@ public class BoletaModel {
     @JoinColumn(name = "ID_Usuario")
     private UsuarioModel usuarioBoleta;
 
-    public BoletaModel(Integer idBoleta, Integer monto, CarritoModel carrito) {
+    public BoletaModel(Long idBoleta, Integer monto, CarritoModel carrito) {
         this.idBoleta = idBoleta;
         this.monto = monto;
         this.carrito = carrito;
     }
 
-    public Integer getIdBoleta() {
+    public Long getIdBoleta() {
         return idBoleta;
     }
 
-    public void setIdBoleta(Integer idBoleta) {
+    public void setIdBoleta(Long idBoleta) {
         this.idBoleta = idBoleta;
     }
 

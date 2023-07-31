@@ -9,7 +9,7 @@ public class RestriccionEdadModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_RestriccionEdad", nullable = false)
-    private Integer idRestriccionEdad;
+    private Long idRestriccionEdad;
     @Column(name = "edadMinima")
     private Integer edad;
 
@@ -19,7 +19,7 @@ public class RestriccionEdadModel {
     @OneToOne(mappedBy = "idRestriccionEdad")
     private LibroModel libroRestriccion;
 
-    public RestriccionEdadModel(Integer idRestriccionEdad, Integer edad) {
+    public RestriccionEdadModel(Long idRestriccionEdad, Integer edad) {
         this.idRestriccionEdad = idRestriccionEdad;
         this.edad = edad;
     }
@@ -27,11 +27,11 @@ public class RestriccionEdadModel {
     public RestriccionEdadModel() {
     }
 
-    public Integer getIdRestriccionEdad() {
+    public Long getIdRestriccionEdad() {
         return idRestriccionEdad;
     }
 
-    public void setIdRestriccionEdad(Integer idRestriccionEdad) {
+    public void setIdRestriccionEdad(Long idRestriccionEdad) {
         this.idRestriccionEdad = idRestriccionEdad;
     }
 

@@ -4,6 +4,19 @@ import com.libreriadelibros.api.models.CarritoModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface CarritoRepository extends CrudRepository<CarritoModel, Long> {
+
+    CarritoModel create(CarritoModel boleta);
+
+    List<CarritoModel> getAll();
+
+    CarritoModel show(Long id);
+
+    String update(CarritoModel carrito, Long id);
+
+    String delete(Long id);
+
 }

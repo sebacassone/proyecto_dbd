@@ -12,7 +12,7 @@ public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_Usuario", nullable = false)
-    private Integer idUsuario;
+    private Long idUsuario;
     private String nombre;
     private String correoElectronico;
     private Date fechaNacimiento;
@@ -45,11 +45,11 @@ public class UsuarioModel {
     @ManyToMany(mappedBy = "usuariosMetodoPago")
     private List<MetodoDePagoModel> metodosDePago;
 
-    public Integer getIdUsuario() {
+    public Long getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Integer idUsuario) {
+    public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
 

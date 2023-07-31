@@ -9,7 +9,7 @@ public class UbicacionGeoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_UbicacionGeo", nullable = false)
-    private Integer idUbicacionGeo;
+    private Long idUbicacionGeo;
     @Column(name="paisOrigen")
     private String paisOrigen;
     @Column(name= "ciudad")
@@ -22,18 +22,18 @@ public class UbicacionGeoModel {
     @OneToOne(mappedBy = "idUbicacionGeo")
     private LibroModel libroUbicacion;
 
-    public UbicacionGeoModel(Integer idUbicacionGeo, String paisOrigen, String ciudad, String codigoPostal) {
+    public UbicacionGeoModel(Long idUbicacionGeo, String paisOrigen, String ciudad, String codigoPostal) {
         this.idUbicacionGeo = idUbicacionGeo;
         this.paisOrigen = paisOrigen;
         this.ciudad = ciudad;
         this.codigoPostal = codigoPostal;
     }
 
-    public Integer getIdUbicacionGeo() {
+    public Long getIdUbicacionGeo() {
         return idUbicacionGeo;
     }
 
-    public void setIdUbicacionGeo(Integer idUbicacionGeo) {
+    public void setIdUbicacionGeo(Long idUbicacionGeo) {
         this.idUbicacionGeo = idUbicacionGeo;
     }
 

@@ -4,6 +4,19 @@ import com.libreriadelibros.api.models.RestriccionEdadModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface RestriccionEdadRepository extends CrudRepository<RestriccionEdadModel, Long> {
+
+    RestriccionEdadModel create(RestriccionEdadModel restriccionEdad);
+
+    List<RestriccionEdadModel> getAll();
+
+    RestriccionEdadModel show(Long id);
+
+    String update(RestriccionEdadModel restriccionEdad, Long id);
+
+    String delete(Long id);
+
 }

@@ -1,6 +1,5 @@
 package com.libreriadelibros.api.controllers;
 
-
 import com.libreriadelibros.api.models.CarritoModel;
 import com.libreriadelibros.api.services.CarritoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ public class CarritoController {
     public ResponseEntity<CarritoModel> create(@RequestBody CarritoModel carrito){
         CarritoModel result = carritoService.create(carrito);
         try{
-            return ResponseEntity.created(new URI("/boleta"+result.getIdCarrito())).body(result);
+            return ResponseEntity.created(new URI("/carrito"+result.getIdCarrito())).body(result);
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
@@ -42,7 +41,7 @@ public class CarritoController {
     @PutMapping("/{id}")
     @ResponseBody
     public ResponseEntity<String> update(@RequestBody CarritoModel carrito, @PathVariable Long id){
-        return ResponseEntity.ok(carritoService.update(carrito,id));
+        return ResponseEntity.ok(carritoService.update(carrito, id));
     }
 
     @DeleteMapping("/{id}")

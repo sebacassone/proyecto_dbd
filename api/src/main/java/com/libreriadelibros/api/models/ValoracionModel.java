@@ -9,7 +9,7 @@ public class ValoracionModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_Valoracion", nullable = false)
-    private Integer idValoracion;
+    private Long idValoracion;
     private String comentarios;
     private Integer puntuacion;
     @JsonIgnore
@@ -22,11 +22,11 @@ public class ValoracionModel {
     @JoinColumn(name = "ID_Libro")
     private LibroModel libro;
 
-    public Integer getIdValoracion() {
+    public Long getIdValoracion() {
         return idValoracion;
     }
 
-    public void setIdValoracion(Integer idValoracion) {
+    public void setIdValoracion(Long idValoracion) {
         this.idValoracion = idValoracion;
     }
 
