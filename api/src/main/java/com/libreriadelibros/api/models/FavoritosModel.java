@@ -19,7 +19,7 @@ public class FavoritosModel {
     // Relación de muchos a uno
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "ID_Usuario")
+    @JoinColumn(name = "ID_Usuario", unique = false)
     private UsuarioModel usuarioFavorito;
 
     // Relación muchos a muchos

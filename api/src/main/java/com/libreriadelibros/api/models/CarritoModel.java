@@ -17,8 +17,8 @@ public class CarritoModel {
 
     // Relación uno a uno
     @JsonIgnore
-    @OneToOne(optional = false, fetch = FetchType.LAZY)
-    @JoinColumn(name = "NumeroTarjeta")
+    @OneToOne()
+    @JoinColumn(name = "NumeroTarjeta", foreignKey = @ForeignKey(name = "NumeroTarjeta"))
     private MetodoDePagoModel numeroTarjeta;
 
     @JsonIgnore
@@ -28,7 +28,7 @@ public class CarritoModel {
     // Relación de uno a muchos
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "ID_Usuario")
+    @JoinColumn(name = "ID_Usuario", unique = false)
     private UsuarioModel usuarioCarrito;
 
     // Relación mucho a muchos
