@@ -14,9 +14,13 @@ public class UsuarioModel {
     @Column(name = "ID_Usuario", nullable = false)
     private Long idUsuario;
     private String nombre;
+    @Column(name = "CorreoElectronico")
     private String correoElectronico;
+    @Column(name = "FechaNacimiento")
     private Date fechaNacimiento;
-    private String contrasena;
+    @Column(name = "Contraseña")
+    private String contraseña;
+    private String alias;
     // Relación uno a muchos
     @JsonIgnore
     @OneToMany(mappedBy = "usuarioFavorito")
@@ -31,7 +35,7 @@ public class UsuarioModel {
     // Mapeo de las llaves foraneas
     @JsonIgnore
     @ManyToOne()
-    @JoinColumn(name = "Rol")
+    @JoinColumn(name = "ID_Rol", unique = false)
     private RolModel rolUsuario;
 
     // Relación de muchos a muchos
@@ -78,11 +82,11 @@ public class UsuarioModel {
     }
 
     public String getContrasena() {
-        return contrasena;
+        return contraseña;
     }
 
     public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+        this.contraseña = contrasena;
     }
 
     public List<FavoritosModel> getFavoritos() {

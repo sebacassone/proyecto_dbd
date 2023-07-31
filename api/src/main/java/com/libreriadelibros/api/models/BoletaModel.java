@@ -16,13 +16,13 @@ public class BoletaModel {
     // Relación uno a uno
     @JsonIgnore
     @OneToOne()
-    @JoinColumn(name = "ID_Carrito")
+    @JoinColumn(name = "ID_Carrito", unique = false)
     private CarritoModel carrito;
 
     // Relación de muchos a uno
     @JsonIgnore
     @ManyToOne()
-    @JoinColumn(name = "ID_Usuario")
+    @JoinColumn(name = "ID_Usuario", unique = false)
     private UsuarioModel usuarioBoleta;
 
     public BoletaModel(Long idBoleta, Integer monto, CarritoModel carrito) {

@@ -32,8 +32,8 @@ public class MetodoDePagoModel {
     })
     @JoinTable(
             name = "UsuarioPago",
-            joinColumns = {@JoinColumn(name="ID_Usuario")},
-            inverseJoinColumns = {@JoinColumn(name="NumeroTarjeta")}
+            joinColumns = {@JoinColumn(name="NumeroTarjeta")},
+            inverseJoinColumns = {@JoinColumn(name="ID_Usuario")}
     )
     private List<UsuarioModel> usuariosMetodoPago;
 

@@ -14,12 +14,12 @@ public class ValoracionModel {
     private Integer puntuacion;
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "ID_Usuario")
+    @JoinColumn(name = "ID_Usuario", unique = false)
     private UsuarioModel usuario;
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "ID_Libro")
+    @JoinColumn(name = "ID_Libro", unique = false)
     private LibroModel libro;
 
     public Long getIdValoracion() {
