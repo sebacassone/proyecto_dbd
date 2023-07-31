@@ -8,14 +8,44 @@ import jakarta.persistence.*;
 public class CarritoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
+    @Column(name = "ID_Carrito",nullable = false)
     private Long idCarrito;
+    @Column(name="Estado")
     private Boolean estado;
-    private Long numeroTarjeta;
 
+    // Relación uno a uno
     @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name = "numeroDeTarjeta")
-    private MetodoDePagoModel metodoDePago;
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "NumeroTarjeta")
+    private MetodoDePagoModel numeroTarjeta;
 
+    public CarritoModel(Long idCarrito, Boolean estado, MetodoDePagoModel numeroTarjeta) {
+        this.idCarrito = idCarrito;
+        this.estado = estado;
+        this.numeroTarjeta = numeroTarjeta;
+    }
+
+    public Long getIdCarrito() {
+        return idCarrito;
+    }
+
+    public void setIdCarrito(Long idCarrito) {
+        this.idCarrito = idCarrito;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+    public MetodoDePagoModel getNumeroTarjeta() {
+        return numeroTarjeta;
+    }
+
+    public void setNumeroTarjeta(MetodoDePagoModel numeroTarjeta) {
+        this.numeroTarjeta = numeroTarjeta;
+    }
 }

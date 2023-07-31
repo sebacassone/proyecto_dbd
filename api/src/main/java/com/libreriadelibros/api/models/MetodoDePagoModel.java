@@ -9,11 +9,15 @@ import jakarta.persistence.Table;
 @Table(name="MetodoDePago")
 public class MetodoDePagoModel {
     @Id
-    @Column(nullable = false)
+    @Column(name="NumeroTarjeta", nullable = false)
     private Long numeroDeTarjeta;
+    @Column( name = "Nombre")
     private String nombre;
+    @Column(name = "Titular")
     private String titular;
+    @Column(name="cvv")
     private Integer cvv;
+    @Column(name="FechaExpiracion", length = 5)
     private String fechaExpiracion;
 
     public MetodoDePagoModel(Long numeroDeTarjeta, String nombre, String titular, Integer cvv, String fechaExpiracion) {

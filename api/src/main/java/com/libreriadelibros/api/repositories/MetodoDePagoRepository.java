@@ -6,4 +6,5 @@ import com.libreriadelibros.api.models.MetodoDePagoModel;
 
 @Repository
 public interface MetodoDePagoRepository extends CrudRepository<MetodoDePagoModel, Long> {
+
 }
