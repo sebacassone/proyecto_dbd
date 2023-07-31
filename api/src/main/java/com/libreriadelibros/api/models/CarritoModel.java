@@ -17,17 +17,18 @@ public class CarritoModel {
 
     // Relación uno a uno
     @JsonIgnore
-    @OneToOne(mappedBy = "carrito", optional = false, fetch = FetchType.LAZY)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "NumeroTarjeta")
     private MetodoDePagoModel numeroTarjeta;
 
     @JsonIgnore
-    @OneToOne
+    @OneToOne(mappedBy = "carrito")
     private BoletaModel boleta;
 
     // Relación de uno a muchos
     @JsonIgnore
     @ManyToOne
+    @JoinColumn(name = "ID_Usuario")
     private UsuarioModel usuarioCarrito;
 
     // Relación mucho a muchos

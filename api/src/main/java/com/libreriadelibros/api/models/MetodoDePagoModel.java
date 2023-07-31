@@ -21,7 +21,7 @@ public class MetodoDePagoModel {
 
     // Relación uno a uno
     @JsonIgnore
-    @OneToOne
+    @OneToOne(mappedBy = "numeroTarjeta")
     private CarritoModel carrito;
 
     // Relación muchos a muchos

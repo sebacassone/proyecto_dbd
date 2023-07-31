@@ -19,7 +19,7 @@ public class UbicacionGeoModel {
 
     // Relación uno a uno (Esta no tiene la llave foranea)
     @JsonIgnore
-    @OneToOne
+    @OneToOne(mappedBy = "idUbicacionGeo")
     private LibroModel libroUbicacion;
 
     public UbicacionGeoModel(Integer idUbicacionGeo, String paisOrigen, String ciudad, String codigoPostal) {

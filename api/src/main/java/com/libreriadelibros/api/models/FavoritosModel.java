@@ -19,6 +19,7 @@ public class FavoritosModel {
     // Relación de muchos a uno
     @JsonIgnore
     @ManyToOne
+    @JoinColumn(name = "ID_Usuario")
     private UsuarioModel usuarioFavorito;
 
     // Relación muchos a muchos
@@ -34,11 +35,11 @@ public class FavoritosModel {
     )
     private List<LibroModel> librosFav;
 
-    public Integer getIdFavoritos() {
+    public Long getIdFavoritos() {
         return idFavoritos;
     }
 
-    public void setIdFavoritos(Integer idFavoritos) {
+    public void setIdFavoritos(Long idFavoritos) {
         this.idFavoritos = idFavoritos;
     }
 

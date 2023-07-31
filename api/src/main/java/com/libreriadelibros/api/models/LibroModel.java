@@ -28,11 +28,11 @@ public class LibroModel {
 
     // Relaciones uno a uno
     @JsonIgnore
-    @OneToOne(mappedBy = "libroRestriccion")
+    @OneToOne()
     @JoinColumn(name = "ID_RestriccionEdad")
     private RestriccionEdadModel idRestriccionEdad;
     @JsonIgnore
-    @OneToOne(mappedBy = "libroUbicacion")
+    @OneToOne()
     @JoinColumn(name = "ID_UbicacionGeo")
     private UbicacionGeoModel idUbicacionGeo;
 

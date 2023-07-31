@@ -16,7 +16,7 @@ public class RestriccionEdadModel {
     // Relación uno a uno
     // Esta no tiene la llave foranea
     @JsonIgnore
-    @OneToOne
+    @OneToOne(mappedBy = "idRestriccionEdad")
     private LibroModel libroRestriccion;
 
     public RestriccionEdadModel(Integer idRestriccionEdad, Integer edad) {
