@@ -3,6 +3,8 @@ package com.libreriadelibros.api.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Carrito")
 public class CarritoModel {
@@ -18,6 +20,19 @@ public class CarritoModel {
     @OneToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "NumeroTarjeta")
     private MetodoDePagoModel numeroTarjeta;
+
+    // Relación mucho a muchos
+    @JsonIgnore
+    @ManyToMany(cascade = {
+            CascadeType.MERGE,
+            CascadeType.PERSIST
+    })
+    @JoinTable(
+            name = "CarritoLibro",
+            joinColumns = {@JoinColumn(name="ID_Carrito")},
+            inverseJoinColumns = {@JoinColumn(name="ID_Libro")}
+    )
+    private List<LibroModel> librosCarrito;
 
     public CarritoModel(Long idCarrito, Boolean estado, MetodoDePagoModel numeroTarjeta) {
         this.idCarrito = idCarrito;

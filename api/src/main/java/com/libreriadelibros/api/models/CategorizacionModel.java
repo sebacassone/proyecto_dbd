@@ -32,7 +32,10 @@ public class CategorizacionModel {
     public CategorizacionModel(Long idCategorizacion, String genero, List<LibroModel> libros) {
         this.idCategorizacion = idCategorizacion;
         this.genero = genero;
-        this.libros = libros;
+        this.librosCat = libros;
+    }
+
+    public CategorizacionModel() {
     }
 
     public Long getIdCategorizacion() {
@@ -52,10 +55,10 @@ public class CategorizacionModel {
     }
 
     public List<LibroModel> getLibros() {
-        return libros;
+        return librosCat;
     }
 
     public void setLibros(List<LibroModel> libros) {
-        this.libros = libros;
+        this.librosCat = libros;
     }
 }

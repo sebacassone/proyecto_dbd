@@ -1,9 +1,8 @@
 package com.libreriadelibros.api.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="MetodoDePago")
@@ -20,12 +19,28 @@ public class MetodoDePagoModel {
     @Column(name="FechaExpiracion", length = 5)
     private String fechaExpiracion;
 
+    @JsonIgnore
+    @ManyToMany(cascade = {
+            CascadeType.MERGE,
+            CascadeType.PERSIST
+    })
+    @JoinTable(
+            name = "UsuarioPago",
+            joinColumns = {@JoinColumn(name="ID_Usuario")},
+            inverseJoinColumns = {@JoinColumn(name="NumeroTarjeta")}
+    )
+    private List<UsuarioModel> usuariosMetodoPago;
+
+
     public MetodoDePagoModel(Long numeroDeTarjeta, String nombre, String titular, Integer cvv, String fechaExpiracion) {
         this.numeroDeTarjeta = numeroDeTarjeta;
         this.nombre = nombre;
         this.titular = titular;
         this.cvv = cvv;
         this.fechaExpiracion = fechaExpiracion;
+    }
+
+    public MetodoDePagoModel() {
     }
 
     public Long getNumeroDeTarjeta() {

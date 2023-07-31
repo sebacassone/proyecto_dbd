@@ -44,7 +44,13 @@ public class LibroModel {
     @ManyToMany(mappedBy = "librosFav")
     private List<FavoritosModel> favoritos;
 
-
+    @JsonIgnore
+    @ManyToMany(mappedBy = "librosCarrito")
+    private List<CarritoModel> carritos;
+    // Esta es la relación de muchos es a muchos con user
+    @JsonIgnore
+    @OneToMany(mappedBy = "libroUser")
+    private List<UsuarioLibroModel> usuarios;
 
 
     public LibroModel(Integer idLibro, String titulo, Integer stock, Integer precio, Integer vistas, String link, String idioma, RestriccionEdadModel idRestriccionEdad, UbicacionGeoModel idUbicacionGeo) {
