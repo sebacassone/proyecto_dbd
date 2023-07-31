@@ -8,9 +8,7 @@ import useMenu from './useMenu';
 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-import logoTranque from './media/logoTranque.svg';
 import menuLogo from './media/menu.svg';
-import arrow from './media/arrow.svg';
 
 export const LatBar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +73,7 @@ export const LatBar = () => {
 			>
 				<div className={styles.fondo + (isOpen ? ' ' + styles.fondoOpen : '')}>
 					<div className={styles.logoTranque} onClick={handleClick}>
-						<img src={logoTranque} height={'32px'}></img>
+						<div style={{height: '32px'}}></div>
 					</div>
 					<div className={styles.logoMenu} onClick={() => handleOpen()}>
 						<img src={menuLogo} height={'16px'}></img>
@@ -111,17 +109,6 @@ export const LatBar = () => {
 											className={isOpen ? styles.infoOpen : styles.infoClosed}
 										>
 											<div> {data.name} </div>
-											{typeof data.subMenu !== 'boolean' && (
-												<div
-													className={
-														data.toggled
-															? styles.arrowContainerOpen
-															: styles.arrowContainer
-													}
-												>
-													<img src={arrow} width={'10px'} />
-												</div>
-											)}
 										</div>
 									</div>
 

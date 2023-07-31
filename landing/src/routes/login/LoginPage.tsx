@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styles from "./LoginPage.module.css";
-import { Login } from "@trq-fundacion/frontend-design-system";
 
 export default function LoginPage() {
   return (
