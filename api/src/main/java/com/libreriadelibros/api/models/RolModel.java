@@ -13,8 +13,7 @@ public class RolModel {
     private Integer idRol;
     private String nombreRol;
     // Relación de uno es a muchos
-    @OneToMany()
-    @JoinColumn(name = "ID_Usuario")
+    @OneToMany(mappedBy = "rolUsuario")
     private List<UsuarioModel> usuariosRol;
 
 }

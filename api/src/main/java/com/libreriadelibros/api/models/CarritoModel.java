@@ -17,9 +17,18 @@ public class CarritoModel {
 
     // Relación uno a uno
     @JsonIgnore
-    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "carrito", optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "NumeroTarjeta")
     private MetodoDePagoModel numeroTarjeta;
+
+    @JsonIgnore
+    @OneToOne
+    private BoletaModel boleta;
+
+    // Relación de uno a muchos
+    @JsonIgnore
+    @ManyToOne
+    private UsuarioModel usuarioCarrito;
 
     // Relación mucho a muchos
     @JsonIgnore
@@ -38,6 +47,9 @@ public class CarritoModel {
         this.idCarrito = idCarrito;
         this.estado = estado;
         this.numeroTarjeta = numeroTarjeta;
+    }
+
+    public CarritoModel() {
     }
 
     public Long getIdCarrito() {

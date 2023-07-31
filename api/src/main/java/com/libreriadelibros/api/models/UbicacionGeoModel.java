@@ -1,5 +1,6 @@
 package com.libreriadelibros.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,6 +16,11 @@ public class UbicacionGeoModel {
     private String ciudad;
     @Column(name="codigoPostal")
     private String codigoPostal;
+
+    // Relación uno a uno (Esta no tiene la llave foranea)
+    @JsonIgnore
+    @OneToOne
+    private LibroModel libroUbicacion;
 
     public UbicacionGeoModel(Integer idUbicacionGeo, String paisOrigen, String ciudad, String codigoPostal) {
         this.idUbicacionGeo = idUbicacionGeo;

@@ -12,10 +12,17 @@ public class BoletaModel {
     private Integer idBoleta;
     @Column(name="Monto")
     private Integer monto;
+
+    // Relación uno a uno
     @JsonIgnore
-    @OneToOne
+    @OneToOne(mappedBy = "boleta")
     @JoinColumn(name = "ID_Carrito")
     private CarritoModel carrito;
+
+    // Relación de muchos a uno
+    @JsonIgnore
+    @ManyToOne()
+    private UsuarioModel usuarioBoleta;
 
     public BoletaModel(Integer idBoleta, Integer monto, CarritoModel carrito) {
         this.idBoleta = idBoleta;

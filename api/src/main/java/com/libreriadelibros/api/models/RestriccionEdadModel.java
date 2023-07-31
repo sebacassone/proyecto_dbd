@@ -1,5 +1,6 @@
 package com.libreriadelibros.api.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,9 +13,18 @@ public class RestriccionEdadModel {
     @Column(name = "edadMinima")
     private Integer edad;
 
+    // Relación uno a uno
+    // Esta no tiene la llave foranea
+    @JsonIgnore
+    @OneToOne
+    private LibroModel libroRestriccion;
+
     public RestriccionEdadModel(Integer idRestriccionEdad, Integer edad) {
         this.idRestriccionEdad = idRestriccionEdad;
         this.edad = edad;
+    }
+
+    public RestriccionEdadModel() {
     }
 
     public Integer getIdRestriccionEdad() {

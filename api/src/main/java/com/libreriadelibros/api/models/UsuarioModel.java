@@ -19,17 +19,20 @@ public class UsuarioModel {
     private String contrasena;
     // Relación uno a muchos
     @JsonIgnore
-    @OneToMany
-    @JoinColumn(name = "ID_Favoritos")
+    @OneToMany(mappedBy = "usuarioFavorito")
     private List<FavoritosModel> favoritos;
     @JsonIgnore
-    @OneToMany
-    @JoinColumn(name = "ID_Carrito")
+    @OneToMany(mappedBy = "usuarioCarrito")
     private List<CarritoModel> carritos;
     @JsonIgnore
-    @OneToMany
-    @JoinColumn(name = "ID_Boleta")
+    @OneToMany(mappedBy = "usuarioBoleta")
     private List<BoletaModel> boletas;
+
+    // Mapeo de las llaves foraneas
+    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "Rol")
+    private RolModel rolUsuario;
 
     // Relación de muchos a muchos
     // Tabla UserLibro donde se tiene un atributo perteneciente a la tabla intermedia (un boooleano)

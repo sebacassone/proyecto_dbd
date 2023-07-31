@@ -19,6 +19,12 @@ public class MetodoDePagoModel {
     @Column(name="FechaExpiracion", length = 5)
     private String fechaExpiracion;
 
+    // Relación uno a uno
+    @JsonIgnore
+    @OneToOne
+    private CarritoModel carrito;
+
+    // Relación muchos a muchos
     @JsonIgnore
     @ManyToMany(cascade = {
             CascadeType.MERGE,

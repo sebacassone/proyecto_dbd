@@ -12,9 +12,15 @@ public class FavoritosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID_Favoritos", nullable = false)
-    private Integer idFavoritos;
+    private Long idFavoritos;
     @Column(name="Cantidad")
     private Integer cantidad;
+
+    // Relación de muchos a uno
+    @JsonIgnore
+    @ManyToOne
+    private UsuarioModel usuarioFavorito;
+
     // Relación muchos a muchos
     @JsonIgnore
     @ManyToMany(cascade = {
