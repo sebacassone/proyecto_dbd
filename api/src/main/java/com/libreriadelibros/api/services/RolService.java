@@ -2,6 +2,7 @@ package com.libreriadelibros.api.services;
 
 import com.libreriadelibros.api.models.RolModel;
 import com.libreriadelibros.api.repositories.RolRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class RolService {
 
+    @Autowired
     private RolRepository rolRepository;
     
     public RolModel create(RolModel boleta){
@@ -16,6 +18,7 @@ public class RolService {
     }
 
     public List<RolModel> getAll(){
+        System.out.println(rolRepository.findAll());
         return (List<RolModel>) rolRepository.findAll();
     }
 
